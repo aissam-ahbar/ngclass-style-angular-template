@@ -1,3 +1,23 @@
-# ngclass-style-angular-template
+# ngClass to add or remove class on CSS element
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/ngclass-style-angular-template)
+```
+# app.component.css
+.firstClass {
+  color: white;
+}
+
+.secondClass {
+  background-color: #1976d2;
+}
+```
+
+```
+# app.component.html
+<div [ngClass]="'firstClass secondClass'">element1</div>
+
+<div [ngClass]="['firstClass', 'secondClass']">element2</div>
+
+<div [ngClass]="{ firstClass: true, secondClass: true }">element3</div>
+
+<div [ngClass]="{ 'firstClass secondClass': true }">element5</div>
+```
